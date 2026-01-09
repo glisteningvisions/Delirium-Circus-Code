@@ -3,11 +3,11 @@ define narrator = Character("Narrator", color="#ffffff")
 define mystery = Character("???", color="#ffffff")
 define mc = Character("[mcname]", color="#ffffff")
 define end = Character("End", color="#ffffff")
-define smc = Character("Shadow Milk Cookie", color="#4b88dd")
+define zyntrix = Character("Zyntrix", color="#ffffff")
 
 # Character sprite definitions
-image smc pleased = "characters/smc_pleased.png"
-image smc happy = "characters/smc_happy.png"
+image zyntrix one = "characters/zyntrix_happy.png"
+image zyntrix one = "characters/zyntrix_pleased.png"
 
 # Default name
 default mcname = "MC"
@@ -31,7 +31,7 @@ label start:
 
     window show
     narrator "You weren't particularly an outside person. You always preferred to stay in your room, playing games or reading books until your eyes started watering."
-    narrator "It didn’t help that your job was a stay-at-home job. Lately though, you’ve been so BOOOORED that you needed to get outside and get some fresh air."
+    narrator "It didn’t help that your job was a stay-at-home job. Lately though, you’ve been so BOOOORRRED that you needed to get outside and get some fresh air."
     mc "But there are so many people I don't recall."
     narrator "TOO BAD! YOU NEED FRESH AIR!"
 
@@ -51,8 +51,9 @@ label start:
 label stay_in_bed:
     play music "audio/morningwakeup.mp3" fadein 1.0 volume 0.5
     pause 1.0
-    mc "Wait what am I doing? Why am I listening to a voice in my head?? Am I going crazy??? Eh ill sleep it off."
-    narrator "Maybe today isn't the day for adventure after all."
+    mc "Wait what am I doing? Why am I listening to a voice in my head?? Am I going crazy??? Eh I'll sleep it off."
+    narrator "..."
+    narrator "And so you slept to see another day, but you can't run away from destiny."
     # Fade to black
     scene black with fade
     end "Sweet Dreams."
@@ -109,7 +110,7 @@ label keep_walking:
     pause 1.0
     narrator " You start walking aimlessly, hoping to get whatever that’s watching off your tail, not realizing that there would be nowhere to go."
     scene black with fade
-    end "Lost cause."
+    end "Lost Cause."
     stop music
     return
 
@@ -128,7 +129,7 @@ label go_back_home:
     pause 6.0
     # Transition to distortedoutside scene
     scene distortedoutside with Dissolve(2.0)
-    mc "Okay now I know I’ve seen this corner before…."
+    mc "Okay, now I know I’ve seen this corner before…."
     
     narrator "The paths start to twist and turn, taking you somewhere unrecognizable."
     
@@ -148,14 +149,14 @@ play sound "audio/circusmusic.mp3" fadein 2.0 volume 2.0 loop
 # Transition to circusinterior scene
 scene circustentinterior with fade
 
-show smc pleased at center with Dissolve(1.0)
+show zyntrix pleased at center with Dissolve(1.0)
 
-smc "Ladies, gents and everybody in between! Welcome to the show, entry fee, you! Today it seems like we have a lovely new face in the audience."
+zyntrix "Ladies, gents and everybody in between! Welcome to the show, entry fee, you! Today it seems like we have a lovely new face in the audience."
 
 mc "What."
 
-show smc happy at center
+show zyntrix happy at center
 
-smc "Yes you, what's your name my little spectator, my darling marionette!"
+zyntrix "Yes you, what's your name my little spectator, my darling marionette!"
 
 return
